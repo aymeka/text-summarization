@@ -4,6 +4,7 @@ from datasets import Dataset, DatasetDict
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq
 
 data_path = r"C:\Users\karad\Desktop\cnn_dailymail"
+# https://www.kaggle.com/datasets/gowrishankarp/newspaper-text-summarization-cnn-dailymail adresinden veri setini indriebilirsiniz.
 
 train_data = pd.read_csv(os.path.join(data_path, "train.csv")).sample(1000, random_state=42)
 val_data = pd.read_csv(os.path.join(data_path, "validation.csv")).sample(1000, random_state=42)
